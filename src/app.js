@@ -39,3 +39,89 @@
 //Take all of Lily's strategies and concatenate them to a single var
 //Seperate the strategies by a single space
 //Return the length of the complete strategy
+
+function moreAboutHome(address, distanceFromTown, hasNeighbours) {
+    return typeof(address) + typeof(distanceFromTown) + typeof(hasNeighbours);
+}
+
+function moreAboutKaren(parents, noOfSiblings, isNuclearFamily) {
+    return typeof(parents) === "string" && typeof(noOfSiblings) === "number" && typeof(isNuclearFamily) === "boolean";
+}
+
+function doesFriendExist(ageInText, ageInNumber) {
+    if(ageInText == "NaN")
+    return ageInText;
+    else if(ageInNumber == "NaN")
+    return ageInNumber;
+    else
+    return NaN;
+}
+
+function sweetTooth(totalNoOfSweets, sweetsConsumedByKaren, sweetsConsumedInNMeters, metersToTravel) {
+    totalNoOfSweets = totalNoOfSweets - sweetsConsumedByKaren;
+    var res = metersToTravel * sweetsConsumedInNMeters;
+    if(res <= totalNoOfSweets) {
+    totalNoOfSweets -= res;
+    return totalNoOfSweets / 2;
+    }
+    else
+    return "No sweets for Karen's friend";
+}
+
+function convertToCelsius(fahrenheit) {
+    let a = typeof fahrenheit;
+    if(a == "undefined")
+    return "Technical Error!";
+    else if(a == "object")
+    return "Technical Error!";
+    else if(a == "string")
+    return "Technical Error!";
+    else {
+       var c = (fahrenheit - 32) / 1.8;
+       return c;
+    }
+}
+
+function aDifficultChoice(choice)
+{
+    let c;
+    if(choice == -1)
+    return "Break down and give up all hope";
+
+    else 
+    {
+        var a = typeof choice;
+        if(a == "undefined")
+        return "Wasn't able to decide";
+        if(choice == "I give up")
+        return "Refused to do anything for Karen";
+    }
+    switch(choice)
+    {
+        case 1 :
+            c = "Take her daughter to a doctor";
+                        break;
+         case 2 : 
+         c = "Talk to her husband about it";
+                        break;
+         case 3 : 
+         c = "Counsel her daughter herself";
+                      break;
+          case 4 : 
+          c = "Lock her daughter in her room";
+                          break;
+        default :
+        c = nothing;
+                break;     
+                                                       
+    }
+    return c;
+}
+
+function consoleKaren(strategies) {
+    var res = "";
+    strategies.forEach(element => {
+        res += element;
+    });
+    return res;
+}
